@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --Red: hsl(0, 100%, 68%);
+    --Very-Dark-Blue: hsl(230, 29%, 20%);
+    --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+    --Grayish-Blue: hsl(231, 7%, 65%);
+    --Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+body{
+    min-height: 100vh;
+    /* min-width: 100vh;  */
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Barlow", sans-serif;
+    /* overflow: hidden; */
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 5rem;
+    margin-bottom: 6rem;
+    position: relative;
+
+    @media (max-width: 425px){
+        margin: 1rem;
+    }
+}
+
+.hide{
+    display: none;
+
+    @media (min-width: 425px){
+        display: block;
+    }
+}
+
+.show{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    list-style: none;
+    text-transform: uppercase;
+    justify-content: center;
+
+    
+    @media (max-width: 425px){
+        flex-direction: column;
+        gap: 1.5rem;
+        background-color:aliceblue;
+        width: 250px;
+        padding: 1rem;
+        position: absolute;
+        left: 50%;
+        top: 150%;
+        transform: translateX(-50%);
+        box-shadow: 0px 0px 8px 1px;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+button{
+    border: none;
+}
+
+header nav ul li{
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.closs{
+
+    @media (min-width:425px){
+        display: none;
+    }
+}
+#close{
+    display: none;
+    z-index: 2;
+}
+
+.hambarger{
+    display: block;
+}
+
+
+header nav ul .dot{
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--Grayish-Blue);
+
+    @media (max-width: 425px){
+        width: 100%;
+        height: 1px;
+    }
+}
+
+header nav ul .login{
+    color: var(--Grayish-Blue);
+}
+
+header nav ul li:hover{
+    border-bottom: 1px solid;
+}
+
+.content-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4rem;
+    margin: 3rem 5rem;
+
+    @media (max-width: 425px){
+        grid-template-columns: 1fr;
+        margin: 1rem;
+    }
+}
+
+.left-content{
+    @media (max-width: 425px){
+        grid-row: 2;
+    }
+}
+
+.new{
+    font-family: "Barlow Condensed", sans-serif;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-size: .7rem;
+    margin-bottom: 1rem;
+    font-weight: 200;
+}
+
+.new span{
+    background-color: black;
+    color: white;
+    padding: .1rem .5rem;
+    border-radius: 1rem;
+    font-weight: 400;
+}
+
+h1{
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.button{
+    margin-top: 2rem;
+    display: flex;
+    gap: .5rem;
+    justify-content: start;
+    align-items: center;
+}
+
+.button .new{
+    margin-bottom: initial !important;
+}
+
+.btn{
+    padding: .5rem 1rem;
+    background-color: var(--Red);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: small;
+    cursor: pointer;
+}
+
+.btn:hover{
+    opacity: .8;
+}
+
+.right-content{
+    margin-left: 4rem;
+    overflow: hidden;
+}
+
+.right-content img{
+    min-width: 130%;
+    overflow: hidden;
+}
