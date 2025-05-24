@@ -47,7 +47,7 @@ header nav{
 .hide{
     display: none;
 
-    @media (min-width: 425px){
+    @media (min-width: 768px){
         display: block;
     }
 }
@@ -61,7 +61,7 @@ header nav{
     justify-content: center;
 
     
-    @media (max-width: 768px){
+    @media (max-width: 425px){
         flex-direction: column;
         gap: 1.5rem;
         background-color:aliceblue;
@@ -89,7 +89,7 @@ header nav ul li{
 
 .closs{
 
-    @media (min-width:425px){
+    @media (min-width:768px){
         display: none;
     }
 }
